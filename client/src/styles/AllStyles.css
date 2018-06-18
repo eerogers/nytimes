@@ -1,0 +1,41 @@
+#box {
+    background-color: lightgrey;
+    position: relative;
+    top: 150px;
+    margin: 10px 50px 10px 50px;
+}
+
+#subtitle {
+    margin: 0px 0px 30px 0px;
+}
+
+#header-box {
+    position: fixed;
+    top: 0px;
+    background-color: darkblue;
+    color: ghostwhite;
+    width: 100%;
+}
+
+#subheader {
+    background-color: steelblue;
+    padding: 10px;
+    color: ghostwhite;
+}
+.entry {
+    width: 75%;
+    padding: 5px;
+    text-align: center;
+    color: gray;
+}
+p {
+    font-size: 16px;
+    margin: 10px;
+}
+#search {
+    background-color: darkblue;
+    color: ghostwhite;
+    font-size: 16px;
+    padding: 10px 15px 10px 15px;
+    margin: 10px;
+}
