@@ -39,3 +39,21 @@ p {
     padding: 10px 15px 10px 15px;
     margin: 10px;
 }
+
+#result-box {
+    background-color: ghostwhite;
+    margin: 5px;
+}
+
+.saveB {
+    position: relative;
+    background-color: darkblue;
+    color: ghostwhite;
+    font-size: 16px;
+    padding: 5px 10px 5px 10px;
+    margin: 5px;
+}
+
+a {
+    color: black;
+}

@@ -1,15 +1,49 @@
-const axios = require("axios");
-const router = require("express").Router();
-//router.get("/articles", (req, res) => {
-//  axios
-//    .get("https://api.nytimes.com/svc/search/v2/articlesearch.json" += "?", 
-//    {params: {'api-key': "8145520545c544fcbec3b1c062e2a890",
-//    'q': "Stalin"}
-  //  'begin_date': "?19450521",
-  //  'end_date': "?19700521"}
-//    })
-//    .then(({ data: { results } }) => res.json(results))
-//    .catch(err => res.status(422).json(err));
-//});
+var Router = require('express').Router()
+var db = require('../models')
 
-module.exports = router;
+Router.get('/articles', function (req, res) {
+  db.User.find({})
+    .then(r => {
+      res.json(r)
+    })
+    .catch(e => {
+      console.log(e)
+    })
+})
+Router.get('/articles/:id', function (req, res) {
+  // req.params.id
+  db.User.findById(req.params.id)
+    .then(r => {
+      res.json(r)
+    })
+    .catch(e => {
+      console.log(e)
+    })
+})
+
+Router.post('/articles', function (req, res) {
+  db.User.create({
+    title: req.body.title,
+    date: req.body.date,
+    url: req.body.link
+  })
+    .then(r => {
+      res.json(r)
+    })
+    .catch(e => {
+      console.log(e)
+    })
+})
+
+// Router.put('/users:id', function (req, res) {
+//   // req.params.id
+// })
+
+// Router.delete('/users', function (req, res) {
+
+// })
+// Router.delete('/users:id', function (req, res) {
+//   // req.params.id
+// })
+
+module.exports = Router
